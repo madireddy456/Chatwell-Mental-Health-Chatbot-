@@ -1,0 +1,68 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - depression
+  - suicide
+  - not
+  - Negativity
+  - Exams
+  - Thank
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Remember that every challenge you face is an opportunity for growth. You've overcome obstacles before, and you can do it again. Stay focused on your goals, take one step at a time, and believe in yourself. You're stronger than you think. Keep pushing forward, and better days are ahead. Take care of your health too !"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_Thank:
+  - text: "You are welcome:)"
+
+  utter_goodbye:
+  - text: "Bye! Have a Nice day"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_not:
+  - text: "Iam sorry to hear that you are not feeling well.Try to take  rest.You could also try eating some comforting food or take any medicine if needed. Remember to listen to your body and take care of yourself :>"
+  
+  
+  utter_depression:
+  - text: "Feeling low is a common experience for many people . Try to develop self-esteem and self-compassion, and identify healthier ways of relating to yourself and others. Remember that you are worthy of love and support, and reaching out for help is a courageous step towards healing. Try to write down your thoughts, go on a walk or listen to your favourite music. Hope you feel better soon 💪"
+
+  utter_suicide:
+  - text: "I'm really sorry to hear that you're feeling this way. It's important to know that there are people who care about you and want to support you through this difficult time. Please consider reaching out to a trusted friend, family member, or a mental health professional for help and support. You're not alone 🤍🦋"
+  
+  utter_Negativity:
+  - text: "It's common to feel that way sometimes, but it's important to remember that everyone has value and purpose. You have unique qualities and strengths that make you valuable. If you're struggling to see your worth, consider talking to someone who can help you explore your strengths and find ways to build on them. You're capable of achieving great things, and it's okay to ask for support along the way🤞"
+
+  utter_Exams:
+  - text: "Prepare Early and Smart:
+Start studying early, organize materials, and create a structured schedule.
+
+Balance and Wellness:
+Take breaks, prioritize sleep, nutrition, and hydration for peak performance.
+
+Stay Positive and Motivated:
+Embrace challenges, believe in yourself, and stay determined with a positive mindset🎯
+
+Strategic Exam Approach:
+Practice actively, review past exams, read instructions carefully, and manage time wisely⏳
+
+Celebrate and Trust Yourself:
+Celebrate achievements, trust your abilities, and approach each exam confidently🎉"
+
