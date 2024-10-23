@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ChatWell</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/favicon.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/static/static/assets/css/styles.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+    #chat-widget-messages{
+        max-height:200px;
+        overflow-y:auto;    
+    }
+    
+</style>
+ 
+</head>
+<body>
+  
+<div class="background-div">
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="chatbot-icon">
+        <img src="https://img.freepik.com/free-vector/flat-woman-chatting-with-chatbot-communicating-ai-robot-assistant_88138-959.jpg?t=st=1711087009~exp=1711090609~hmac=f86dd001e05ca53b8b5f375b467fcd1685c63803b8c0065948a694da61a51cd6&w=1060"alt="Chatbot Icon">
+      </div>
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>ChatWell AI<span></span></h1>
+      </a>
+  
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <!-- <li><a href="#contact">Contact</a></li> -->
+        </ul>
+      </nav><!-- .navbar -->
+
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center section-bg">
+    <div class="container">
+      <div class="row justify-content-between gy-5"> 
+        
+        <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+          <h2 data-aos="fade-up">Welcome to ChatWell: <br>Your Personal Mental Health Companion</h2>
+          <p data-aos="fade-up" data-aos-delay="100">Experience seamless conversations with ChatWell.</p>
+          <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+            <a href="#chat" class="btn-book-a-table">Get Started!</a>
+          </div>
+        </div>
+        <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
+          <img src="static/assets/img/photo22.jpg" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
+        </div>
+      
+      </div>
+    </div>
+  </section><!-- End Hero Section -->
+</div>
+<br><br><br>
+  <main id="main">
+    <section id="description">
+    <section id="about" class="about">
+      <div class="container-two" data-aos="fade-up">
+        <!-- <div class="section-header-desc">
+          <p><span>Description</span></p>
+        </div> -->
+        <div class="row gy-4">
+         
+          <div class="section-header-desc">
+            <p><span>Description</span></p>
+          <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
+            <div class="content ps-0 ps-lg-5">
+              <p>"ChatWell" is a mental health chatbot designed to provide support, guidance, and resources to individuals seeking assistance with their mental well-being. This AI-driven chatbot offers a safe and confidential space for users to express their thoughts, feelings, and concerns related to mental health.</p>
+              <p>Through natural language understanding (NLU) technology, ChatWell can engage in meaningful conversations with users, empathetically responding to their queries and providing personalized support based on their unique needs.</p>
+            </div>
+          </div>
+        </div> 
+        </div>
+      </div>
+    </section><!-- End About Section -->
+  </section>
+    
+    <section id="chat" class="chat">
+    <div class="chatbot2">
+        <p><span> Ask Me! 💭</span></p>
+    </div>
+    <div class="chatbot-container">
+        <div class="chatbot">
+            <!--chatbox-->
+            <div id="chat-widget" class="card position">
+                
+                <div class="card-body" id="chat-widget-messages">
+                    <!--chat messages will be appended here-->
+                </div>
+                <div class="card-footer">
+                    <input type="text" class="form-control" id="chat-widget-input" placeholder="Type your message...">
+                </div>
+            </div>
+            <div class="button-container">
+            <button id="chat-widget-button" type="button" class="btn btn-primary
+            rounded-circle chat-sign-button">Chat</button>
+        </div>
+    </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#chat-widget-button").on("click",function(){
+                $("#chat-widget").toggleClass("d-none")
+        });
+        $("#chat-widget-close-button").on("click",function(){
+            $("#chat-widget").addClass("d-none")
+        });
+
+        $("#chat-widget-input").keypress(function(event){
+            if(event.which===13){
+                let userMessage=$("#chat-widget-input").val();
+                $("#chat-widget-input").val("")
+
+            $("#chat-widget-messages").append("<div><strong>You: </strong>"+userMessage + "</div>");
+
+                $.ajax({
+                    type: "POST",
+                    url:"/webhook",
+                    contentType:"application/json",
+                    data:JSON.stringify({message:userMessage}),
+                    success:function(data){
+                        let botResponse=data.response;
+
+                        $("#chat-widget-messages").append("<div><strong>Bot: </strong>"+botResponse + "</div>");
+                    },
+                    error:function(){
+                        
+                    }
+                });
+
+            }
+        });
+    });
+</script>
+
+</section>
+<!--         
+    <br><br><br><br><br><br><br><br>-->
+<br><br><br><br> 
+
+    <!-- ======= Contact Section ======= -->
+    <!-- <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Contact</h2>
+          <p>Need Help? <span>Contact Us</span></p>
+        </div>
+
+        <div class="mb-3">
+          <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.845700951685!2d78.35158841486796!3d17.44579210563758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93ab9c6358e9%3A0x6b6c86932c9bdc!2s6th%20Floor%2C%20Sundarayya%20Vignana%20Kendram%2C%20Technical%20Block%2C%20Madhava%20Reddy%20Colony%2C%20Gachibowli%2C%20Hyderabad%2C%20Telangana%20500032!5e0!3m2!1sen!2sin!4v1642001564154" frameborder="0" allowfullscreen></iframe>
+        </div> End Google Maps 
+
+        <div class="row gy-4">
+
+          <div class="col-md-6">
+            <div class="info-item  d-flex align-items-center">
+              <i class="icon bi bi-map flex-shrink-0"></i>
+              <div>
+                <h3>Our Address</h3>
+                <p>The SmartBridge, Gachibowli,Telangana</p>
+              </div>
+            </div>
+          </div> End Info Item 
+
+          <div class="col-md-6">
+            <div class="info-item d-flex align-items-center">
+              <i class="icon bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>contact@example.com</p>
+              </div>
+            </div>
+          </div> End Info Item 
+
+          <div class="col-md-6">
+            <div class="info-item  d-flex align-items-center">
+              <i class="icon bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>XXXXXXXXXX</p>
+              </div>
+            </div>
+          </div>End Info Item 
+
+          <div class="col-md-6">
+            <div class="info-item  d-flex align-items-center">
+              <i class="icon bi bi-share flex-shrink-0"></i>
+              <div>
+                <h3>Opening Hours</h3>
+                <div><strong>Mon-Fri:</strong> 9AM - 6PM;
+                  <br>
+                  <strong>Saturday,Sunday</strong> Closed
+                </div>
+              </div>
+            </div>
+          </div> End Info Item 
+
+        </div>
+
+      </div>
+    </section>End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+<!-- 
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div>
+            <h4>Address</h4>
+            <p>
+              The SmartBridge <br>
+              6th Floor, Sundarayya Vignana Kendram, Technical Block, Madhava Reddy Colony, Gachibowli, Hyderabad, Telangana 500032<br>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Any Help?</h4>
+            <p>
+              <strong>Phone:</strong>XXXXXXXXX<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Opening Hours</h4>
+            <p>
+              <strong>Mon-Fri : </strong>9AM- 5PM<br>
+              <strong>Saturday,Sunday : </strong>Closed
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Follow Us</h4>
+          <div class="social-links d-flex">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+-->
+    <div class="container">
+      <div class="copyright">
+         &copy; Copyright <strong><span>ChatWell🤖</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/  -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">C15</a> -->
+      </div>
+    </div> 
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/aos/aos.js"></script>
+  <script src="static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assets/js/main.js"></script>
+
+</body>
+
+</html>
